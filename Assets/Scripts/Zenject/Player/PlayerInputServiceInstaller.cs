@@ -7,7 +7,11 @@ public class PlayerInputServiceInstaller : MonoInstaller
     
     public override void InstallBindings()
     {
-        Container.Bind<IPlayerInputService>().To<PlayerInputService>()
-            .FromComponentInNewPrefab(_playerInputServicePrefab).AsSingle();
+        BindPlayerInput();
+    }
+
+    private void BindPlayerInput()
+    {
+        Container.Bind<IPlayerInputService>().To<PlayerInputService>().FromComponentInNewPrefab(_playerInputServicePrefab).AsSingle();
     }
 }
