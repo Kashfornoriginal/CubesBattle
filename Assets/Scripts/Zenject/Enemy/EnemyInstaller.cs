@@ -1,10 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
 public class EnemyInstaller : MonoInstaller, IInitializable
 {
     [SerializeField] private EnemySpawnPoint _enemySpawnPoint;
-    [SerializeField] private int _enemyCount;
+    [SerializeField] private List<EnemySpawnPoint> _spawnPoints;
 
     public override void InstallBindings()
     {
@@ -28,9 +29,9 @@ public class EnemyInstaller : MonoInstaller, IInitializable
         
         enemyFactory.Load();
 
-        for (int i = 0; i < _enemyCount; i++)
+        foreach (var spawnPoint in _spawnPoints)
         {
-            enemyFactory.Create(_enemySpawnPoint.EnemyType, _enemySpawnPoint.transform.position);
+            enemyFactory.Create(_enemySpawnPoint.EnemyType, spawnPoint.transform.position);
         }
     }
 }
