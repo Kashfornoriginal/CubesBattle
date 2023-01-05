@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 9066672669662677376}
   - component: {fileID: 9066672669662677377}
   - component: {fileID: 9066672669662677378}
-  - component: {fileID: 9066672669662677379}
+  - component: {fileID: -1475959084039438033}
   - component: {fileID: -4733703371163612413}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Unit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9066672669662677376
 MeshFilter:
@@ -99,7 +99,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9066672669662677379
+--- !u!114 &-1475959084039438033
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
